@@ -26,7 +26,9 @@
 
 **4分59秒 · 从个人健康记录，到可追溯的院外健康研究。**
 
-https://github.com/user-attachments/assets/d07c2808-4b52-4b38-ae56-620eefdfac52
+[![项目视频封面：从记录，到能够核实的研究](docs/screenshots/demo-video-cover.jpg)](docs/demo.md)
+
+**[▶ 点击播放完整演示](docs/demo.md)** · 点击封面后进入播放页，首页仅加载封面。
 
 | 时间 | 展示内容 |
 | --- | --- |
