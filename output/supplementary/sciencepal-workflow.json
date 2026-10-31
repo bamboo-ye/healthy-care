@@ -1,0 +1,58 @@
+{
+  "schema": "healthy-care-sciencepal-workflow-description-v1",
+  "export_kind": "project workflow description; not a native SciencePal import",
+  "nodes": [
+    "authorize_researcher",
+    "freeze_synthetic_input",
+    "create_manifest",
+    "submit_sciencepal_agent",
+    "poll_external_state",
+    "fetch_artifacts",
+    "independent_validation",
+    "publish_verified_result"
+  ],
+  "edges": [
+    [
+      "authorize_researcher",
+      "freeze_synthetic_input"
+    ],
+    [
+      "freeze_synthetic_input",
+      "create_manifest"
+    ],
+    [
+      "create_manifest",
+      "submit_sciencepal_agent"
+    ],
+    [
+      "submit_sciencepal_agent",
+      "poll_external_state"
+    ],
+    [
+      "poll_external_state",
+      "fetch_artifacts"
+    ],
+    [
+      "fetch_artifacts",
+      "independent_validation"
+    ],
+    [
+      "independent_validation",
+      "publish_verified_result"
+    ]
+  ],
+  "non_success_states": [
+    "external_asked",
+    "external_unknown",
+    "awaiting_import",
+    "failed",
+    "stopped",
+    "invalidated"
+  ],
+  "verification": [
+    "input hash",
+    "method/data/rule/knowledge versions",
+    "independently recomputed metrics"
+  ],
+  "scope": "synthetic external execution only; personal chat is a separate LangGraph workflow"
+}

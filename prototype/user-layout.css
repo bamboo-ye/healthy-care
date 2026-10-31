@@ -1,0 +1,266 @@
+/* User-only composition. The research workspace keeps its own layout. */
+.userTheme {
+  --layout-gap: 20px;
+  --card-radius: 24px;
+  --card-padding: 24px;
+}
+
+.userTheme .appWorkspace {
+  width: min(1220px, 100%);
+  padding: 32px clamp(24px, 3vw, 44px) 40px;
+  background: transparent;
+  backdrop-filter: none;
+}
+.userTheme .workspaceHeader { align-items: center; margin-bottom: 24px; }
+.userTheme .workspaceHeader > div { min-width: 0; }
+.userTheme .workspaceHeader h1 { font-size: 28px; letter-spacing: -.035em; }
+.userTheme .workspaceHeader p:last-child { line-height: 1.8; }
+.userTheme .workspaceHeader > .secondaryAction { font-weight: 500; }
+.userTheme .profileButton.is-current,
+.userTheme .mobileProfile.is-current { background: #e3efde; border-color: #c8dabc; color: #497343; }
+.userTheme .card {
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
+  background: rgba(255, 255, 252, .93);
+  border: 1px solid rgba(255, 255, 255, .85);
+  box-shadow: 0 6px 24px #456b3f07;
+}
+.userTheme .sectionHeading { align-items: center; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
+.userTheme .sectionTitle { display: flex; align-items: center; gap: 11px; flex: 1; min-width: 0; }
+.userTheme .sectionTitle h2 { font-size: 15px; font-weight: 600; line-height: 1.6; overflow-wrap: anywhere; }
+.userTheme .sectionIcon {
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #edf3e7;
+  color: #6c8b5e;
+}
+.userTheme .sectionIcon .icon { width: 19px; height: 19px; stroke-width: 1.6; }
+.userTheme .sectionHeading > .tag { flex-shrink: 0; margin-left: auto; }
+.userTheme .tag { padding: 4px 8px; font-size: 10px; border-radius: 8px; }
+.userTheme .tag.neutral { background: #f1f2eb; color: #828274; }
+.userTheme .bodyCopy { margin: 0 0 16px; font-size: 13px; line-height: 1.9; }
+.userTheme .subtle { margin: 12px 0 0; font-size: 11px; line-height: 1.85; color: #8b8678; }
+.userTheme .noteBox { font-size: 12px; line-height: 1.85; padding: 14px 16px; background: #f0f5e9; }
+.userTheme .noteBox.orange { background: var(--orange-soft); }
+.userTheme .cardActions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+.userTheme .cardActions .primaryAction,
+.userTheme .cardActions .secondaryAction,
+.userTheme .cardActions .quietAction { min-height: 40px; font-size: 12px; font-weight: 500; }
+.userTheme .cardLink { display: inline-flex; align-items: center; min-height: 34px; margin-top: 9px; font-size: 12px; }
+.userTheme .messageActions { gap: 8px; margin-top: 20px; }
+.userTheme .messageActions button { font-size: 12px; padding: 9px 13px; }
+.userTheme .conversationFoot { margin: 18px auto 0; max-width: 760px; font-size: 10px; line-height: 1.9; }
+
+/* Daily view: conversation entry, unified care, then paired history cards. */
+.userTheme .dailyEntry {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  overflow: hidden;
+  border: 1px solid #ffffffe6;
+  border-radius: 28px;
+  background: #fffffff0;
+  box-shadow: 0 8px 28px #42663809;
+  margin-bottom: var(--layout-gap);
+}
+.userTheme .dailyWelcome {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 250px;
+  padding: 28px;
+  background: linear-gradient(120deg, #e4efd9, #eff5e6);
+}
+.userTheme .dailyWelcomeCopy { position: relative; z-index: 1; width: 100%; }
+.userTheme .statusTag { background: #ffffff90; color: #6d835e; font-size: 10px; gap: 5px; }
+.userTheme .statusTag .icon { width: 12px; height: 12px; }
+.userTheme .dailyWelcome h2 { max-width: 280px; margin: 16px 0 10px; font-size: 25px; line-height: 1.55; text-wrap: balance; }
+.userTheme .dailyWelcome p { max-width: calc(100% - 85px); font-size: 12px; line-height: 1.9; }
+.userTheme .dailyWelcome > img { position: absolute; right: 15px; bottom: 21px; width: 105px; height: 116px; object-fit: contain; }
+.userTheme .dailyConversation { display: flex; flex-direction: column; justify-content: center; padding: 24px; min-width: 0; }
+.userTheme .entryHeading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.userTheme .entryHeading strong { font-size: 13px; font-weight: 500; }
+.userTheme .entryHeading span { font-size: 10px; color: #969485; }
+.userTheme .dailyEntry .conversationComposer { padding: 0; background: transparent; border: 0; }
+.userTheme .dailyEntry textarea { min-height: 106px; resize: vertical; background: #fafcf7; border-color: #e0e7d8; }
+.userTheme .dailyEntry .composerBottom { margin-top: 12px; gap: 8px; }
+.userTheme .dailyEntry .composerBottom > small { display: none; }
+.userTheme .wellnessGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--layout-gap); align-items: start; }
+.userTheme .dailyCareCard { margin-bottom: var(--layout-gap); }
+.userTheme .dailyCareCard .sectionHeading { margin-bottom: 10px; }
+.userTheme .careContext { display: flex; align-items: start; justify-content: space-between; gap: 16px; margin-bottom: 19px; }
+.userTheme .careContext p { margin: 0; color: #8b8678; font-size: 11px; line-height: 1.8; }
+.userTheme .careWeatherStatus { display: inline-flex; align-items: center; gap: 5px; flex-shrink: 0; color: #959888; font-size: 10px; line-height: 1.8; }
+.userTheme .careWeatherStatus .icon { width: 13px; height: 13px; }
+.userTheme .personalCareAdvice { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 28px; padding: 0; margin: 0; list-style: none; }
+.userTheme .personalCareAdvice li { min-width: 0; padding-left: 14px; border-left: 2px solid #d9e6cb; }
+.userTheme .personalCareAdvice small { display: block; color: #93a083; font-size: 10px; margin-bottom: 4px; }
+.userTheme .personalCareAdvice p { margin: 0; font-size: 13px; line-height: 1.9; }
+.userTheme .careFooter { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; border-top: 1px solid #e9ede1; padding-top: 16px; margin-top: 20px; }
+.userTheme .careFooter.actionsOnly { justify-content: flex-end; }
+.userTheme .careFooter .cardActions { margin: 0; }
+.userTheme .careFooter .cardLink,
+.userTheme .careFooter .subtle { margin: 0; }
+.userTheme .dailyAdvice { display: grid; gap: 13px; list-style: none; padding: 0; margin: 0; font-size: 13px; line-height: 1.85; }
+.userTheme .dailyAdvice li { position: relative; padding-left: 17px; margin: 0; }
+.userTheme .dailyAdvice li::before { content: ''; position: absolute; left: 1px; top: .72em; width: 5px; height: 5px; border-radius: 50%; background: #9db58b; }
+.userTheme .profileContext { margin: 16px 0 0; font-size: 11px; line-height: 1.8; color: #827c70; }
+.userTheme .profileContext > span { display: block; font-size: 10px; color: #9b988a; margin-bottom: 3px; }
+.userTheme .recordQuote { margin: 0 0 16px; padding: 13px 15px; border-radius: 14px; background: #f5f6f0; font-size: 13px; line-height: 1.85; overflow-wrap: anywhere; }
+.userTheme .recordFacts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.userTheme .recordFacts .dataLine { display: grid; gap: 5px; margin: 0; font-size: 10px; }
+.userTheme .recordFacts strong { font-size: 13px; }
+
+/* Active follow-up cards align by row rather than by two uneven stacks. */
+.userTheme .activeHealthGrid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--layout-gap); align-items: stretch; }
+.userTheme .activeHealthGrid > .card { display: flex; flex-direction: column; }
+.userTheme .activeHealthGrid .cardActions { margin-top: auto; padding-top: 20px; }
+.userTheme .summaryMetrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.userTheme .summaryMetrics > div { padding: 12px 14px; background: #edf3e6; border-radius: 14px; }
+.userTheme .summaryMetrics span { display: block; color: #829076; font-size: 10px; }
+.userTheme .summaryMetrics strong { display: block; color: #5a7850; font-size: 20px; font-weight: 500; margin-top: 4px; }
+.userTheme .summaryMetrics strong small { font-size: 11px; font-weight: 400; }
+.userTheme .observationCard .trendChart { flex: 1; min-height: 150px; max-height: 190px; }
+.userTheme .observationCard .subtle { margin-top: auto; padding-top: 8px; }
+.userTheme .observationList { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; counter-reset: observation; }
+.userTheme .observationList li { display: flex; align-items: start; gap: 10px; font-size: 13px; line-height: 1.8; counter-increment: observation; }
+.userTheme .observationList li::before { content: counter(observation); display: grid; place-items: center; width: 23px; height: 23px; flex-shrink: 0; background: #f0f4e9; color: #81946f; font-size: 10px; border-radius: 8px; margin-top: 1px; }
+.userTheme .reminderHint { display: flex; align-items: center; gap: 8px; padding: 11px 13px; margin-top: 16px; border-radius: 12px; background: #f2f5ec; color: #829174; font-size: 10px; }
+.userTheme .reminderHint .icon { width: 15px; height: 15px; }
+.userTheme .reminderHint strong { margin-left: auto; font-size: 12px; color: #5d7e50; }
+.userTheme .medicationNotice { grid-column: 1 / -1; }
+.userTheme .medicationNotice .bodyCopy { margin-bottom: 0; }
+.userTheme .priorityCard { border-color: #e8d2af; }
+
+/* Personal lookup views use the same title, content and action rhythm. */
+.userTheme .historyList { display: grid; gap: var(--layout-gap); }
+.userTheme .recordMeta { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+.userTheme .episodeDetails { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 24px; padding-top: 18px; border-top: 1px solid #e9ede1; }
+.userTheme .minorHeading { font-size: 11px; font-weight: 500; color: #8a917e; margin: 0 0 16px; }
+.userTheme .episodeTimeline { padding-left: 24px; border-left: 1px solid #e9ede1; min-width: 0; }
+.userTheme .episodeTimeline .timeline { margin-top: 0; max-height: 320px; overflow: auto; }
+.userTheme .timelineItem p { white-space: pre-wrap; line-height: 1.9; overflow-wrap: anywhere; font-size: 12px; }
+.userTheme .episodeCard > .cardActions { border-top: 1px solid #e9ede1; padding-top: 18px; }
+.userTheme .medicationGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: var(--layout-gap); }
+.userTheme .medicationGrid > .card:only-child { grid-column: 1 / -1; max-width: 760px; }
+.userTheme .queryActions .messageActions { margin-top: 18px; }
+.userTheme .queryGrid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: var(--layout-gap); align-items: start; }
+.userTheme .privacyGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--layout-gap); align-items: start; }
+.userTheme .privacyFacts { border-top: 1px solid #ecede6; }
+.userTheme .privacyFacts .dataLine { margin: 0; padding: 15px 0; border-bottom: 1px solid #ecede6; font-size: 12px; }
+.userTheme .privacyFacts .dataLine strong { text-align: right; }
+.userTheme .supportingCard { background: #f5f8eef0; }
+.userTheme .emptyCard { padding: 55px 28px; max-width: 760px; margin: 0 auto; }
+.userTheme .emptyCard > .icon { width: 36px; height: 36px; padding: 15px; box-sizing: content-box; border-radius: 22px; background: #edf3e5; }
+.userTheme .emptyCard h2 { margin: 20px 0 10px; font-size: 21px; font-weight: 500; }
+.userTheme .emptyCard p { max-width: 440px; margin: 0 auto 24px; font-size: 13px; line-height: 1.9; }
+
+/* Chat retains the reference product's conversational layout. */
+.userTheme .conversationPanel { min-height: 560px; height: calc(100dvh - 205px); background: #ffffffe6; border-radius: 26px; }
+.userTheme .conversationHeader { background: #fbfdf8d9; }
+.userTheme .conversationBody { padding: 26px 28px; }
+.userTheme .conversationComposer { padding: 17px 22px; background: #fcfdf9f0; }
+.userTheme .conversationComposer textarea { border-color: #dfe6d6; font-size: 13px; line-height: 1.8; }
+.userTheme .conversationMessage .messageBubble { padding: 14px 17px; }
+.userTheme .conversationMessage .messageContent { max-width: min(84%, 680px); }
+.userTheme .conversationCard { padding: 14px 16px; }
+.userTheme .conversationCard .messageActions { margin-top: 12px; }
+.userTheme .messageImages button {
+  width: 176px;
+  max-width: 100%;
+  height: 144px;
+  border-radius: 13px;
+  overflow: hidden;
+  background: #f2f6ec;
+}
+.userTheme .messageImages img { width: 100%; height: 100%; max-height: none; object-fit: contain; }
+.userTheme .chatImagePicker:focus-within { outline: 3px solid #3c8666; outline-offset: 3px; }
+
+@media (max-width: 1150px) {
+  .userTheme .appWorkspace { padding: 28px 24px 36px; }
+  .userTheme .dailyEntry { grid-template-columns: 1fr; }
+  .userTheme .dailyWelcome { min-height: 195px; padding: 25px 28px; }
+  .userTheme .dailyWelcome h2 { max-width: 70%; margin-top: 12px; }
+  .userTheme .dailyWelcome p { max-width: 70%; }
+  .userTheme .dailyWelcome > img { width: 123px; height: 140px; right: 30px; bottom: 22px; }
+  .userTheme .dailyConversation { padding: 20px 24px; }
+  .userTheme .dailyEntry textarea { min-height: 85px; }
+}
+@media (min-width: 601px) and (max-width: 1000px) {
+  .userTheme { --card-padding: 21px; --layout-gap: 18px; }
+  .userTheme .wellnessGrid,
+  .userTheme .activeHealthGrid,
+  .userTheme .queryGrid,
+  .userTheme .privacyGrid { grid-template-columns: 1fr; }
+  .userTheme .activeHealthGrid .cardActions { margin-top: 18px; padding-top: 0; }
+  .userTheme .observationCard .trendChart { flex: auto; max-height: 190px; }
+  .userTheme .episodeDetails { grid-template-columns: 1fr; gap: 20px; }
+  .userTheme .episodeTimeline { padding: 18px 0 0; border-left: 0; border-top: 1px solid #e9ede1; }
+  .userTheme .medicationGrid { grid-template-columns: 1fr; }
+  .userTheme .sectionTitle h2 { font-size: 14px; }
+}
+@media (max-width: 600px) {
+  .userTheme { --layout-gap: 16px; --card-padding: 20px; --card-radius: 22px; }
+  .userTheme .appWorkspace { padding: 22px 16px 30px; }
+  .userTheme .appSidebar { padding: 16px 16px 12px; }
+  .userTheme .sidebarBrand { gap: 8px; }
+  .userTheme .sidebarBrand strong { font-size: 17px; }
+  .userTheme .appSidebar nav button { padding: 9px 5px; font-size: 11px; }
+  .userTheme .appSidebar nav button .icon { width: 14px; height: 14px; }
+  .userTheme .workspaceHeader { gap: 12px; margin-bottom: 20px; }
+  .userTheme .workspaceHeader h1 { font-size: 25px; }
+  .userTheme .workspaceHeader p:last-child { font-size: 11px; max-width: 230px; margin-top: 7px; }
+  .userTheme .workspaceHeader > .secondaryAction { font-size: 10px; padding: 9px 11px; min-height: 36px; gap: 5px; }
+  .userTheme .workspaceHeader > .secondaryAction .icon { width: 14px; height: 14px; }
+  .userTheme .sectionHeading { gap: 9px; margin-bottom: 16px; }
+  .userTheme .sectionTitle { gap: 9px; }
+  .userTheme .sectionTitle h2 { font-size: 14px; }
+  .userTheme .sectionIcon { width: 31px; height: 31px; border-radius: 10px; }
+  .userTheme .sectionIcon .icon { width: 17px; height: 17px; }
+  .userTheme .sectionHeading > .tag { font-size: 9px; }
+  .userTheme .dailyEntry { border-radius: 24px; }
+  .userTheme .dailyWelcome { min-height: 212px; padding: 24px 22px; }
+  .userTheme .dailyWelcome h2 { max-width: 100%; font-size: 22px; margin: 14px 0 9px; }
+  .userTheme .dailyWelcome p { max-width: min(205px, calc(100% - 85px)); font-size: 12px; }
+  .userTheme .dailyWelcome > img { width: 88px; height: 97px; right: 12px; bottom: 18px; }
+  .userTheme .dailyConversation { padding: 19px 18px; }
+  .userTheme .entryHeading strong { font-size: 12px; }
+  .userTheme .entryHeading span { font-size: 9px; }
+  .userTheme .dailyEntry textarea { min-height: 90px; font-size: 12px; }
+  .userTheme .wellnessGrid,
+  .userTheme .activeHealthGrid,
+  .userTheme .medicationGrid,
+  .userTheme .queryGrid,
+  .userTheme .privacyGrid { grid-template-columns: 1fr; }
+  .userTheme .dailyAdvice { font-size: 12px; gap: 11px; }
+  .userTheme .careContext { flex-direction: column; gap: 6px; margin-bottom: 17px; }
+  .userTheme .personalCareAdvice { grid-template-columns: 1fr; gap: 16px; }
+  .userTheme .personalCareAdvice p { font-size: 12px; }
+  .userTheme .careFooter { align-items: start; flex-direction: column; gap: 13px; }
+  .userTheme .bodyCopy,
+  .userTheme .recordQuote,
+  .userTheme .observationList li { font-size: 12px; }
+  .userTheme .cardActions { gap: 8px; margin-top: 18px; }
+  .userTheme .cardActions button { font-size: 11px; }
+  .userTheme .activeHealthGrid .cardActions { padding-top: 0; margin-top: 20px; }
+  .userTheme .summaryMetrics strong { font-size: 19px; }
+  .userTheme .observationCard .trendChart { flex: auto; max-height: 180px; }
+  .userTheme .episodeDetails { grid-template-columns: 1fr; gap: 16px; }
+  .userTheme .episodeTimeline { padding: 18px 0 0; border: 0; border-top: 1px solid #e9ede1; }
+  .userTheme .emptyCard { padding: 38px 22px; }
+  .userTheme .emptyCard h2 { font-size: 20px; }
+  .userTheme .emptyCard p { font-size: 12px; }
+  .userTheme .conversationPanel { min-height: 490px; height: calc(100dvh - 285px); border-radius: 22px; }
+  .userTheme .conversationHeader { gap: 8px; padding: 12px; }
+  .userTheme .conversationHeader > .tag { max-width: 110px; white-space: normal; text-align: center; }
+  .userTheme .conversationBody { padding: 20px 12px; }
+  .userTheme .conversationComposer { padding: 13px; }
+  .userTheme .conversationMessage .messageBubble { padding: 11px 13px; }
+  .userTheme .conversationMessage .messageContent { max-width: calc(100% - 34px); }
+  .userTheme .conversationMessage.user .messageContent { max-width: 100%; }
+  .userTheme .conversationCard { padding: 12px; }
+  .userTheme .messageImages button { width: 160px; height: 136px; }
+}

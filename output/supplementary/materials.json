@@ -1,0 +1,65 @@
+{
+  "updated": "2026-10-31",
+  "materials": [
+    {
+      "name": "代码仓库",
+      "url": "https://github.com/bamboo-ye/healthy-care",
+      "access": "公开源码、锁文件、部署配置与合成研究材料；本机凭据和原始个人记录不进入仓库。"
+    },
+    {
+      "name": "技术报告（五页项目说明）",
+      "url": "https://admissions-broadband-bend-vanilla.trycloudflare.com/materials/health-companion-project-description.pdf",
+      "access": "公开PDF，无需登录。"
+    },
+    {
+      "name": "技术补充报告",
+      "url": "https://admissions-broadband-bend-vanilla.trycloudflare.com/materials/supplementary/technical-report.md",
+      "access": "公开下载Markdown，说明架构、SciencePal联动与验证边界。"
+    },
+    {
+      "name": "科研Agent配置与系统提示词",
+      "url": "https://admissions-broadband-bend-vanilla.trycloudflare.com/materials/supplementary/agent-config.zip",
+      "access": "公开下载；脱密配置说明，非SciencePal原生导入文件。"
+    },
+    {
+      "name": "工作流结构导出",
+      "url": "https://admissions-broadband-bend-vanilla.trycloudflare.com/materials/supplementary/workflow-exports.zip",
+      "access": "公开下载；实际LangGraph结构JSON与SciencePal联动说明，不含节点实现。"
+    },
+    {
+      "name": "用户测试执行计划",
+      "url": "https://admissions-broadband-bend-vanilla.trycloudflare.com/materials/supplementary/usability-plan.md",
+      "access": "公开下载；尚未招募或执行，无独立真人测试结果。"
+    },
+    {
+      "name": "软件与真实服务技术验收",
+      "url": "https://admissions-broadband-bend-vanilla.trycloudflare.com/materials/supplementary/technical-acceptance.md",
+      "access": "公开下载；软件检查与合成输入验收，不替代真人或临床研究。"
+    },
+    {
+      "name": "实验结果与局限",
+      "url": "https://admissions-broadband-bend-vanilla.trycloudflare.com/materials/supplementary/benchmark-results.md",
+      "access": "公开下载，含主结果与事后敏感性分析说明。"
+    },
+    {
+      "name": "可复现实验包",
+      "url": "https://admissions-broadband-bend-vanilla.trycloudflare.com/materials/supplementary/benchmark-reproduction.zip",
+      "access": "公开下载；独立科研脚本、合成观测、协议、哈希和参考结果；Python标准库可离线重算。"
+    },
+    {
+      "name": "SciencePal执行产物与日志",
+      "url": "https://admissions-broadband-bend-vanilla.trycloudflare.com/materials/supplementary/platform-evidence.zip",
+      "access": "公开下载；认证API取得的合成实验产物及校验记录。"
+    },
+    {
+      "name": "SciencePal公开运行回放",
+      "url": "https://sciencepal.ai/share/65ecd584-6adf-4000-88d9-4004e3f82a65",
+      "access": "无需登录，只读回放独立追问组件实验。"
+    },
+    {
+      "name": "科研端运行与快照下载",
+      "url": "https://admissions-broadband-bend-vanilla.trycloudflare.com/research/",
+      "access": "使用已交付的专用科研评审账号；分析任务中可下载当前冻结输入和任务包。"
+    }
+  ]
+}

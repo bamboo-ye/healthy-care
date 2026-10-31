@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "run_id": "analysis-20261018-c4fae3592e",
+  "platform": "local-python",
+  "run_url": null,
+  "data_origin": "synthetic",
+  "data_version": "synthetic-light-illness-v2",
+  "input_sha256": "c4fae3592e5dd5703019372cfa775651a1529d49e565216e8facf34cf4fb30eb",
+  "code_version": "research-2026.10.18.2",
+  "rule_version": "medication-context-1",
+  "knowledge_version": "symptom-pattern-demo-1",
+  "config": {
+    "topic": "all",
+    "category": "all",
+    "window_days": 7
+  },
+  "metrics": {
+    "participants": 48,
+    "expected_patient_days": 324,
+    "observed_patient_days": 267,
+    "completeness_pct": 82.4,
+    "first_field_coverage_pct": 58.3,
+    "longitudinal_field_coverage_pct": 97.9,
+    "coverage_difference_pp": 39.6,
+    "medication_candidate_participants": 32,
+    "medication_candidate_count": 32,
+    "documented_use_days": 137,
+    "documented_nonuse_days": 103,
+    "unknown_use_days": 27,
+    "missing_patient_days": 57,
+    "lower_use_pct": 42.3,
+    "upper_use_pct": 68.2
+  },
+  "limitations": [
+    "合成边界样例，不代表真实人群频率",
+    "字段覆盖改善不是诊断或疗效改善",
+    "候选不是滥用、药物不良反应或耐药结论",
+    "自评分不是经验证的临床结局量表"
+  ],
+  "artifacts": [
+    "input.json",
+    "report.json",
+    "quality.csv",
+    "medication_candidates.csv",
+    "patient_days.csv"
+  ],
+  "provenance": "self-declared-platform"
+}

@@ -1,0 +1,52 @@
+# Local configuration, identities and operational data
+.env
+.env.*
+!.env.example
+.local/
+.data/
+.security-local/
+*.pem
+*.key
+*.p12
+*.pfx
+*.dump
+*.sqlite
+*.sqlite3
+*.db
+*.har
+id_rsa
+id_ed25519
+
+# Dependencies, caches and builds
+node_modules/
+dist/
+__pycache__/
+.pytest_cache/
+.venv/
+.cache/
+*.py[cod]
+*.egg-info/
+coverage.out
+coverage/
+test-results/
+playwright-report/
+.DS_Store
+/tmp/
+
+# Raw recordings, generated audio and local delivery archives
+*.mp4
+*.webm
+*.wav
+*.aiff
+*.mp3
+/output/*
+
+# Public, synthetic research evidence and the final project brief
+!/output/recording-benchmark-20261024/
+!/output/recording-benchmark-20261024.zip
+!/output/recording-benchmark-platform-evidence-20261024/
+!/output/recording-benchmark-unknown-sensitivity-20261026.json
+!/output/supplementary/
+!/output/pdf/
+/output/pdf/*
+!/output/pdf/health-companion-project-description.pdf

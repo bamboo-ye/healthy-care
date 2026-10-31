@@ -1,0 +1,1097 @@
+{
+  "analysis": "post-hoc unknown-impact sensitivity; not preregistered; not primary",
+  "clinical_validation": false,
+  "unknown_code_rule": "记不清/不确定/未知 are explicit unknown text, excluded from nonempty known-field recall; original raw responses retained",
+  "summary_macro_recall": {
+    "initial": 0.31354166666666666,
+    "generic": 0.7729166666666667,
+    "directed": 0.7916666666666666
+  },
+  "directed_minus_generic": 0.018749999999999933,
+  "cluster_bootstrap_95_interval": [
+    -0.04583333333333334,
+    0.09791666666666667
+  ],
+  "records": [
+    {
+      "case_id": "digestive-04",
+      "cluster": "template-04",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-04",
+      "cluster": "template-04",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-04",
+      "cluster": "template-04",
+      "arm": "initial",
+      "recall": 0.4,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-05",
+      "cluster": "template-05",
+      "arm": "directed",
+      "recall": 0.6,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-05",
+      "cluster": "template-05",
+      "arm": "generic",
+      "recall": 0.6,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-05",
+      "cluster": "template-05",
+      "arm": "initial",
+      "recall": 0.2,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-06",
+      "cluster": "template-06",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-06",
+      "cluster": "template-06",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-06",
+      "cluster": "template-06",
+      "arm": "initial",
+      "recall": 0.4,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-07",
+      "cluster": "template-07",
+      "arm": "directed",
+      "recall": 0.8,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "digestive-07",
+      "cluster": "template-07",
+      "arm": "generic",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "digestive-07",
+      "cluster": "template-07",
+      "arm": "initial",
+      "recall": 0.2,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "digestive-08",
+      "cluster": "template-08",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-08",
+      "cluster": "template-08",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-08",
+      "cluster": "template-08",
+      "arm": "initial",
+      "recall": 0.4,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-09",
+      "cluster": "template-09",
+      "arm": "directed",
+      "recall": 0.8333333333333334,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-09",
+      "cluster": "template-09",
+      "arm": "generic",
+      "recall": 0.8333333333333334,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-09",
+      "cluster": "template-09",
+      "arm": "initial",
+      "recall": 0.3333333333333333,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-10",
+      "cluster": "template-10",
+      "arm": "directed",
+      "recall": 0.75,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-10",
+      "cluster": "template-10",
+      "arm": "generic",
+      "recall": 0.75,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-10",
+      "cluster": "template-10",
+      "arm": "initial",
+      "recall": 0.25,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-11",
+      "cluster": "template-11",
+      "arm": "directed",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "digestive-11",
+      "cluster": "template-11",
+      "arm": "generic",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "digestive-11",
+      "cluster": "template-11",
+      "arm": "initial",
+      "recall": 0.2,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "digestive-12",
+      "cluster": "template-12",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-12",
+      "cluster": "template-12",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-12",
+      "cluster": "template-12",
+      "arm": "initial",
+      "recall": 0.6,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-13",
+      "cluster": "template-13",
+      "arm": "directed",
+      "recall": 0.6666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-13",
+      "cluster": "template-13",
+      "arm": "generic",
+      "recall": 0.6666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-13",
+      "cluster": "template-13",
+      "arm": "initial",
+      "recall": 0.16666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-14",
+      "cluster": "template-14",
+      "arm": "directed",
+      "recall": 0.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-14",
+      "cluster": "template-14",
+      "arm": "generic",
+      "recall": 0.8,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-14",
+      "cluster": "template-14",
+      "arm": "initial",
+      "recall": 0.2,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-15",
+      "cluster": "template-15",
+      "arm": "directed",
+      "recall": 0.75,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "digestive-15",
+      "cluster": "template-15",
+      "arm": "generic",
+      "recall": 0.75,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "digestive-15",
+      "cluster": "template-15",
+      "arm": "initial",
+      "recall": 0.5,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "digestive-16",
+      "cluster": "template-16",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-16",
+      "cluster": "template-16",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-16",
+      "cluster": "template-16",
+      "arm": "initial",
+      "recall": 0.4,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-17",
+      "cluster": "template-17",
+      "arm": "directed",
+      "recall": 0.6666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-17",
+      "cluster": "template-17",
+      "arm": "generic",
+      "recall": 0.6666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-17",
+      "cluster": "template-17",
+      "arm": "initial",
+      "recall": 0.16666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-18",
+      "cluster": "template-18",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-18",
+      "cluster": "template-18",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-18",
+      "cluster": "template-18",
+      "arm": "initial",
+      "recall": 0.4,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "digestive-19",
+      "cluster": "template-19",
+      "arm": "directed",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "digestive-19",
+      "cluster": "template-19",
+      "arm": "generic",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "digestive-19",
+      "cluster": "template-19",
+      "arm": "initial",
+      "recall": 0.2,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "respiratory-04",
+      "cluster": "template-04",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-04",
+      "cluster": "template-04",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-04",
+      "cluster": "template-04",
+      "arm": "initial",
+      "recall": 0.4,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-05",
+      "cluster": "template-05",
+      "arm": "directed",
+      "recall": 0.6,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-05",
+      "cluster": "template-05",
+      "arm": "generic",
+      "recall": 0.6,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-05",
+      "cluster": "template-05",
+      "arm": "initial",
+      "recall": 0.2,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-06",
+      "cluster": "template-06",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-06",
+      "cluster": "template-06",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-06",
+      "cluster": "template-06",
+      "arm": "initial",
+      "recall": 0.4,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-07",
+      "cluster": "template-07",
+      "arm": "directed",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "respiratory-07",
+      "cluster": "template-07",
+      "arm": "generic",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "respiratory-07",
+      "cluster": "template-07",
+      "arm": "initial",
+      "recall": 0.2,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "respiratory-08",
+      "cluster": "template-08",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-08",
+      "cluster": "template-08",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-08",
+      "cluster": "template-08",
+      "arm": "initial",
+      "recall": 0.4,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-09",
+      "cluster": "template-09",
+      "arm": "directed",
+      "recall": 0.8333333333333334,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-09",
+      "cluster": "template-09",
+      "arm": "generic",
+      "recall": 0.8333333333333334,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-09",
+      "cluster": "template-09",
+      "arm": "initial",
+      "recall": 0.3333333333333333,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-10",
+      "cluster": "template-10",
+      "arm": "directed",
+      "recall": 0.75,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-10",
+      "cluster": "template-10",
+      "arm": "generic",
+      "recall": 0.75,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-10",
+      "cluster": "template-10",
+      "arm": "initial",
+      "recall": 0.25,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-11",
+      "cluster": "template-11",
+      "arm": "directed",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "respiratory-11",
+      "cluster": "template-11",
+      "arm": "generic",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "respiratory-11",
+      "cluster": "template-11",
+      "arm": "initial",
+      "recall": 0.2,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "respiratory-12",
+      "cluster": "template-12",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-12",
+      "cluster": "template-12",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-12",
+      "cluster": "template-12",
+      "arm": "initial",
+      "recall": 0.6,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-13",
+      "cluster": "template-13",
+      "arm": "directed",
+      "recall": 0.6666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-13",
+      "cluster": "template-13",
+      "arm": "generic",
+      "recall": 0.6666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-13",
+      "cluster": "template-13",
+      "arm": "initial",
+      "recall": 0.16666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-14",
+      "cluster": "template-14",
+      "arm": "directed",
+      "recall": 0.8,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-14",
+      "cluster": "template-14",
+      "arm": "generic",
+      "recall": 0.8,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-14",
+      "cluster": "template-14",
+      "arm": "initial",
+      "recall": 0.2,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-15",
+      "cluster": "template-15",
+      "arm": "directed",
+      "recall": 0.75,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "respiratory-15",
+      "cluster": "template-15",
+      "arm": "generic",
+      "recall": 0.0,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "respiratory-15",
+      "cluster": "template-15",
+      "arm": "initial",
+      "recall": 0.5,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "respiratory-16",
+      "cluster": "template-16",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-16",
+      "cluster": "template-16",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-16",
+      "cluster": "template-16",
+      "arm": "initial",
+      "recall": 0.4,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-17",
+      "cluster": "template-17",
+      "arm": "directed",
+      "recall": 0.6666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-17",
+      "cluster": "template-17",
+      "arm": "generic",
+      "recall": 0.6666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-17",
+      "cluster": "template-17",
+      "arm": "initial",
+      "recall": 0.16666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-18",
+      "cluster": "template-18",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-18",
+      "cluster": "template-18",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-18",
+      "cluster": "template-18",
+      "arm": "initial",
+      "recall": 0.4,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "respiratory-19",
+      "cluster": "template-19",
+      "arm": "directed",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "respiratory-19",
+      "cluster": "template-19",
+      "arm": "generic",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "respiratory-19",
+      "cluster": "template-19",
+      "arm": "initial",
+      "recall": 0.2,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "skin-04",
+      "cluster": "template-04",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-04",
+      "cluster": "template-04",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-04",
+      "cluster": "template-04",
+      "arm": "initial",
+      "recall": 0.4,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-05",
+      "cluster": "template-05",
+      "arm": "directed",
+      "recall": 0.6,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-05",
+      "cluster": "template-05",
+      "arm": "generic",
+      "recall": 0.6,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-05",
+      "cluster": "template-05",
+      "arm": "initial",
+      "recall": 0.2,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-06",
+      "cluster": "template-06",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-06",
+      "cluster": "template-06",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-06",
+      "cluster": "template-06",
+      "arm": "initial",
+      "recall": 0.4,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-07",
+      "cluster": "template-07",
+      "arm": "directed",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "skin-07",
+      "cluster": "template-07",
+      "arm": "generic",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "skin-07",
+      "cluster": "template-07",
+      "arm": "initial",
+      "recall": 0.2,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "skin-08",
+      "cluster": "template-08",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-08",
+      "cluster": "template-08",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-08",
+      "cluster": "template-08",
+      "arm": "initial",
+      "recall": 0.4,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-09",
+      "cluster": "template-09",
+      "arm": "directed",
+      "recall": 0.8333333333333334,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-09",
+      "cluster": "template-09",
+      "arm": "generic",
+      "recall": 0.8333333333333334,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-09",
+      "cluster": "template-09",
+      "arm": "initial",
+      "recall": 0.3333333333333333,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-10",
+      "cluster": "template-10",
+      "arm": "directed",
+      "recall": 0.75,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-10",
+      "cluster": "template-10",
+      "arm": "generic",
+      "recall": 0.75,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-10",
+      "cluster": "template-10",
+      "arm": "initial",
+      "recall": 0.25,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-11",
+      "cluster": "template-11",
+      "arm": "directed",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "skin-11",
+      "cluster": "template-11",
+      "arm": "generic",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "skin-11",
+      "cluster": "template-11",
+      "arm": "initial",
+      "recall": 0.2,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "skin-12",
+      "cluster": "template-12",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-12",
+      "cluster": "template-12",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-12",
+      "cluster": "template-12",
+      "arm": "initial",
+      "recall": 0.6,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-13",
+      "cluster": "template-13",
+      "arm": "directed",
+      "recall": 0.6666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-13",
+      "cluster": "template-13",
+      "arm": "generic",
+      "recall": 0.6666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-13",
+      "cluster": "template-13",
+      "arm": "initial",
+      "recall": 0.16666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-14",
+      "cluster": "template-14",
+      "arm": "directed",
+      "recall": 0.8,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-14",
+      "cluster": "template-14",
+      "arm": "generic",
+      "recall": 0.8,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-14",
+      "cluster": "template-14",
+      "arm": "initial",
+      "recall": 0.2,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-15",
+      "cluster": "template-15",
+      "arm": "directed",
+      "recall": 0.75,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "skin-15",
+      "cluster": "template-15",
+      "arm": "generic",
+      "recall": 0.0,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "skin-15",
+      "cluster": "template-15",
+      "arm": "initial",
+      "recall": 0.5,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "skin-16",
+      "cluster": "template-16",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-16",
+      "cluster": "template-16",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-16",
+      "cluster": "template-16",
+      "arm": "initial",
+      "recall": 0.4,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-17",
+      "cluster": "template-17",
+      "arm": "directed",
+      "recall": 0.6666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-17",
+      "cluster": "template-17",
+      "arm": "generic",
+      "recall": 0.6666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-17",
+      "cluster": "template-17",
+      "arm": "initial",
+      "recall": 0.16666666666666666,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-18",
+      "cluster": "template-18",
+      "arm": "directed",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-18",
+      "cluster": "template-18",
+      "arm": "generic",
+      "recall": 1.0,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-18",
+      "cluster": "template-18",
+      "arm": "initial",
+      "recall": 0.4,
+      "excluded_unknown_fields": []
+    },
+    {
+      "case_id": "skin-19",
+      "cluster": "template-19",
+      "arm": "directed",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "skin-19",
+      "cluster": "template-19",
+      "arm": "generic",
+      "recall": 0.6,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    },
+    {
+      "case_id": "skin-19",
+      "cluster": "template-19",
+      "arm": "initial",
+      "recall": 0.2,
+      "excluded_unknown_fields": [
+        "impact"
+      ]
+    }
+  ]
+}

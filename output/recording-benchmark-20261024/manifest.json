@@ -1,0 +1,9 @@
+{
+  "method_version": "recording-benchmark-v1",
+  "data_origin": "synthetic",
+  "files": {
+    "run_analysis.py": "009b62f23c21faaa42e149491292823e4029c701ed65b634857bf713989d3796",
+    "health-research-input.json": "cc4f234f4b00cdc5dfa02cf0d886b2b6f3c13dd04f357060b3930fc42a323f30",
+    "protocol.md": "dd0f12bb48be3e6c3d18424b67341cc2985b3699f6a72e3a0426a37b17280475"
+  }
+}

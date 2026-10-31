@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-31",
+  "application_source_included": false,
+  "offline_primary_reproduction": "passed",
+  "offline_sensitivity_reproduction": "passed",
+  "credential_scan": "passed",
+  "files": {
+    "index.html": {
+      "bytes": 3474,
+      "sha256": "7b36beb30325cbba1b66205000fddf9e0d16202b4ca37decfd3e9b88b424cbaf"
+    },
+    "materials.json": {
+      "bytes": 3207,
+      "sha256": "b5e64f6d14b1679628c3cc6a55d930a870d8bc592dd7fb1c2406c6675fd0deab"
+    },
+    "technical-report.md": {
+      "bytes": 2909,
+      "sha256": "eeaedd3b75a5a0c62aaa98c61237434291494edf14febb408cd273bf400e763c"
+    },
+    "agent-config.zip": {
+      "bytes": 4765,
+      "sha256": "ce22ea2d9850e8da9ea6277c821f805cd62f30a4102d0f3a5b5b86cf05524ceb"
+    },
+    "workflow-exports.zip": {
+      "bytes": 1734,
+      "sha256": "46e1c1b157bcf9d744af81f71f8e6d885f64b4c7985a4ae4258f9f098650405b"
+    },
+    "usability-plan.md": {
+      "bytes": 1221,
+      "sha256": "7d5cb969f7ac67d62b29d7361a75c4465f589ddcf1b1373e5422e621efa6ee8c"
+    },
+    "technical-acceptance.md": {
+      "bytes": 991,
+      "sha256": "afc41e6e321cfc5c05a909653c9ddc2244079a8be0b72a15050de95a0be866e1"
+    },
+    "benchmark-results.md": {
+      "bytes": 4598,
+      "sha256": "784a29c655fc195ca70e02e770b13a47cdc3e301fe793cce652e0af27f413078"
+    },
+    "benchmark-reproduction.zip": {
+      "bytes": 41704,
+      "sha256": "fd2f6721724923aee1424c76783e4833ee81971868e74d7bf1a732a57b8cceb1"
+    },
+    "platform-evidence.zip": {
+      "bytes": 5313,
+      "sha256": "bb0ccc842ec435605585f4b820bc621f7501880df1a2fe1f3637619cb5900762"
+    }
+  }
+}

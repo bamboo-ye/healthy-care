@@ -1,0 +1,4 @@
+﻿id,label,participants,expected_patient_days,observed_patient_days,completeness_pct,first_field_coverage_pct,longitudinal_field_coverage_pct,coverage_difference_pp,medication_candidate_participants
+all-7,全部主题 · 7天,48,324,267,82.4,58.3,97.9,39.6,32
+all-3,全部主题 · 3天,48,144,129,89.6,58.3,97.9,39.6,32
+skin-7,皮肤主题 · 7天,8,54,43,79.6,62.5,97.5,35.0,5

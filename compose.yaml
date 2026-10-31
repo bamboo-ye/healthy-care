@@ -1,0 +1,153 @@
+name: ${COMPOSE_PROJECT_NAME:-healthy-care}
+x-logging: &logging
+  driver: json-file
+  options: {max-size: 10m, max-file: '3'}
+x-backend: &backend
+  logging: *logging
+  build: ./backend
+  image: healthy-care-api:0.1.0
+  environment: &backend-env
+    DATABASE_URL: postgres://hc_app:${APP_DB_PASSWORD:?Run scripts/bootstrap.py}@postgres:5432/healthycare?sslmode=disable
+    REDIS_URL: redis://redis:6379/0
+    INTERNAL_TOKEN: ${INTERNAL_TOKEN:?Run scripts/bootstrap.py}
+    RUN_SIGNING_KEY: ${RUN_SIGNING_KEY:?Run scripts/bootstrap.py}
+    APP_ORIGIN: ${APP_ORIGIN:-http://localhost:8780}
+    COOKIE_SECURE: ${COOKIE_SECURE:-false}
+    ALLOW_SYNTHETIC_KNOWLEDGE: ${ENABLE_TEST_PROVIDER:-false}
+    AGENT_URL: http://agent-runtime:8000
+    STORAGE_DIR: /data/files
+    RESEARCH_EMAIL: ${RESEARCH_EMAIL:-research@example.test}
+    RESEARCH_PASSWORD: ${RESEARCH_PASSWORD:?Run scripts/bootstrap.py}
+  restart: unless-stopped
+  init: true
+  volumes: [attachments:/data/files]
+  networks: [app, data]
+  mem_limit: 512m
+services:
+  postgres:
+    logging: *logging
+    build: {context: ., dockerfile: deploy/Dockerfile.db}
+    image: healthy-care-db:0.1.0
+    environment:
+      POSTGRES_DB: healthycare
+      POSTGRES_USER: hc_owner
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run scripts/bootstrap.py}
+      APP_DB_PASSWORD: ${APP_DB_PASSWORD:?Run scripts/bootstrap.py}
+      AGENT_DB_PASSWORD: ${AGENT_DB_PASSWORD:?Run scripts/bootstrap.py}
+    volumes: [pgdata:/var/lib/postgresql/data]
+    networks: [data]
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -h 127.0.0.1 -U hc_owner -d healthycare']
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+    mem_limit: 1g
+  redis:
+    logging: *logging
+    image: redis:7.4-alpine@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499
+    command: [redis-server, --maxmemory, 128mb, --maxmemory-policy, allkeys-lru, --save, '', --appendonly, 'no']
+    networks: [data]
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 3s
+      retries: 10
+    restart: unless-stopped
+    mem_limit: 192m
+  migrate:
+    <<: *backend
+    command: [migrate]
+    environment:
+      <<: *backend-env
+      DATABASE_URL: postgres://hc_owner:${POSTGRES_PASSWORD}@postgres:5432/healthycare?sslmode=disable
+    restart: 'no'
+    depends_on:
+      postgres: {condition: service_healthy}
+  api:
+    <<: *backend
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+      redis: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, http://127.0.0.1:8080/readyz]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+  worker:
+    <<: *backend
+    command: [worker]
+    depends_on:
+      api: {condition: service_healthy}
+      agent-runtime: {condition: service_healthy}
+  agent-runtime:
+    logging: *logging
+    build: ./agent
+    image: healthy-care-agent:0.1.0
+    environment:
+      INTERNAL_TOKEN: ${INTERNAL_TOKEN}
+      GO_API_URL: http://api:8080
+      AGENT_DATABASE_URL: postgres://hc_agent:${AGENT_DB_PASSWORD}@postgres:5432/healthycare?sslmode=disable&options=-csearch_path%3Dagent
+      AGENT_PROVIDER: ${AGENT_PROVIDER:-unconfigured}
+      ENABLE_TEST_PROVIDER: ${ENABLE_TEST_PROVIDER:-false}
+      MODEL_BASE_URL: ${MODEL_BASE_URL:-https://api.openai.com/v1}
+      MODEL_API_KEY: ${MODEL_API_KEY:-}
+      MODEL_NAME: ${MODEL_NAME:-}
+      MODEL_TEMPERATURE: ${MODEL_TEMPERATURE-0.2}
+      MODEL_TIMEOUT_SECONDS: ${MODEL_TIMEOUT_SECONDS:-90}
+      MODEL_STREAM_USAGE: ${MODEL_STREAM_USAGE:-true}
+      SCIENCEPAL_BASE_URL: ${SCIENCEPAL_BASE_URL:-https://sciencepal.ai/api}
+      SCIENCEPAL_API_KEY: ${SCIENCEPAL_API_KEY:-}
+      SCIENCEPAL_AGENT_ID: ${SCIENCEPAL_AGENT_ID:-}
+    networks: [app, data]
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz')"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+    init: true
+    mem_limit: 1g
+  gateway:
+    logging: *logging
+    build: {context: ., dockerfile: deploy/Dockerfile.web}
+    image: healthy-care-web:0.1.0
+    ports: ['127.0.0.1:${HTTP_PORT:-8780}:80']
+    networks: [app]
+    depends_on:
+      api: {condition: service_healthy}
+    restart: unless-stopped
+    mem_limit: 192m
+  backup:
+    build: {context: ., dockerfile: deploy/Dockerfile.backup}
+    image: healthy-care-backup:0.1.0
+    environment:
+      PGHOST: postgres
+      PGUSER: hc_owner
+      PGDATABASE: healthycare
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+      BACKUP_KEEP_DAYS: ${BACKUP_KEEP_DAYS:-7}
+      PGCONNECT_TIMEOUT: '10'
+    volumes: [attachments:/data/files:ro, backups:/backups]
+    networks: [data]
+    depends_on:
+      api: {condition: service_healthy}
+      agent-runtime: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, /bin/sh, /opt/backup/health.sh]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+      start_period: 30s
+    restart: unless-stopped
+    init: true
+    logging: *logging
+    mem_limit: 256m
+networks:
+  app: {}
+  data: {internal: true}
+volumes:
+  pgdata: {}
+  attachments: {}
+  backups: {}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e4f1e6">
+  <title>伴AI·健康伙伴 · 科研端原型</title>
+  <link rel="icon" href="../assets/health-logo.svg">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="research.css">
+</head>
+<body>
+  <div class="healthRoot researchTheme" id="research-app">
+    <div class="previewBar"><span><i></i> 科研端原型 <span>· 合成数据 · 方法验证</span></span><span>独立科研工作台</span></div>
+    <div class="appFrame module-health">
+      <aside class="appSidebar">
+        <div class="sidebarBrand"><img src="../assets/health-logo.svg" alt="伴AI·健康伙伴" width="46" height="46"><div><strong>伴AI·健康伙伴</strong><small>院外健康研究工作台</small></div></div>
+        <div class="sidebarIntro"><span data-icon="database"></span><p>从院外记录出发<br>回答可验证的研究问题</p></div>
+        <div class="navCaption">研究数据与分析</div>
+        <nav id="nav" aria-label="科研功能"></nav>
+        <div class="sidebarFooter"><div class="privateHint"><span data-icon="shield"></span><span>按用途授权<small>去标识化研究视图</small></span></div><div class="researchIdentity"><span data-icon="book"></span><div><strong>科研演示空间</strong><small>合成数据 · 无真实患者信息</small></div></div></div>
+      </aside>
+      <main class="appWorkspace" id="main" tabindex="-1"></main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </div>
+  <script src="../shared.js"></script>
+  <script src="engine.js"></script>
+  <script src="research-methods.js"></script>
+  <script src="research-program.js"></script>
+  <script src="experiment-results.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

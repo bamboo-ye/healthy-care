@@ -1,0 +1,7 @@
+﻿data_origin,field,comparable,first_available,window_available,participants
+synthetic,chief,True,48,48,48
+synthetic,onset,True,32,48,48
+synthetic,severity,True,24,48,48
+synthetic,impact,True,12,43,48
+synthetic,medicine,True,24,48,48
+synthetic,change,False,,48,48

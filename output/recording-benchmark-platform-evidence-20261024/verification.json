@@ -1,0 +1,17 @@
+{
+  "data_origin": "synthetic",
+  "technical_status": "passed",
+  "verification": "authenticated-api-fetch-and-independent-recompute",
+  "agent_run_id": "e1a13582-85b3-41e9-abd7-388251e684d9",
+  "thread_id": "65ecd584-6adf-4000-88d9-4004e3f82a65",
+  "status": "completed",
+  "started_at": "2026-10-23T17:35:49.297728+00:00",
+  "completed_at": "2026-10-23T17:38:03.875127+00:00",
+  "output_dir": "/workspace/healthy-care/benchmark-727acd052bfa4e7398b91c5c47fceb86",
+  "sha256": {
+    "report.json": "9176ba071aafd112c584d286178d1ca5806cd5a493dd87f1a427dfe26b837bb3",
+    "stdout.log": "f4488a32044cf7cdda2bb3f57c0630ad0e9244458672395c130f66b3e19a7124",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "clinical_validation": false
+}

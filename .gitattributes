@@ -1,0 +1,6 @@
+# Preserve generated research artifacts byte for byte for hash verification.
+*.csv -text whitespace=cr-at-eol
+*.zip binary
+*.pdf binary
+*.png binary
+*.jpg binary

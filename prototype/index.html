@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e4f1e6">
+  <title>伴AI·健康伙伴 · 用户端原型</title>
+  <link rel="icon" href="assets/health-mascot-green.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="user-layout.css">
+</head>
+<body>
+  <div class="healthRoot userTheme" id="health-app">
+    <div class="previewBar"><span><i></i> 用户端原型 <span>· 对话流程演示 · 未连接真实AI</span></span><span>个人健康空间</span></div>
+    <div class="appFrame module-health">
+      <aside class="appSidebar">
+        <div class="sidebarBrand"><img src="assets/health-mascot-green.png" alt="伴AI·健康伙伴绿色角色" width="46" height="46"><div><strong>伴AI·健康伙伴</strong><small>记录小变化，照顾每一天</small></div></div>
+        <button class="mobileProfile" data-route="privacy" aria-label="我的与授权">我</button>
+        <div class="sidebarIntro"><span data-icon="leaf"></span><p>从日常的小变化<br>更了解自己的健康</p></div>
+        <div class="navCaption" id="nav-caption">我的健康空间</div>
+        <nav id="nav" aria-label="健康功能"></nav>
+        <div class="sidebarFooter"><div class="privateHint"><span data-icon="shield"></span><span>记录由你掌控<small>研究使用需单独授权</small></span></div><button class="profileButton" data-route="privacy"><span>我</span><div><strong>我的健康空间</strong><small>本地演示 · 记录仅本次有效</small></div><b>›</b></button></div>
+      </aside>
+      <main class="appWorkspace" id="main" tabindex="-1"></main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <dialog id="modal"><div class="dialogHead"><h2 id="modal-title"></h2><button data-action="close-dialog" aria-label="关闭弹窗">×</button></div><div id="modal-content"></div></dialog>
+  </div>
+  <script src="shared.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

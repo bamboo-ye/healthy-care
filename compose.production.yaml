@@ -1,0 +1,18 @@
+# Opt-in only. Requires a domain, DNS and HTTPS origin; not used by local demos.
+services:
+  gateway:
+    ports: !override ['80:80', '443:443', '443:443/udp']
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN:?Set an owned domain}
+      TLS_EMAIL: ${TLS_EMAIL:?Set certificate contact email}
+    volumes:
+      - ./deploy/Caddyfile.production:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+  api:
+    environment: {COOKIE_SECURE: 'true'}
+  worker:
+    environment: {COOKIE_SECURE: 'true'}
+volumes:
+  caddy_data: {}
+  caddy_config: {}

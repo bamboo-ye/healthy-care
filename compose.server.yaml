@@ -1,0 +1,40 @@
+# Independent deployment beside an existing application; HTTPS terminates at tunnel.
+services:
+  postgres:
+    image: healthy-care-db:20261026-amd64
+    mem_limit: 384m
+    command: [postgres, -c, shared_buffers=64MB, -c, work_mem=2MB, -c, max_connections=60]
+  redis:
+    mem_limit: 96m
+    command: [redis-server, --maxmemory, 64mb, --maxmemory-policy, allkeys-lru, --save, '', --appendonly, 'no']
+  migrate:
+    image: healthy-care-api:20261026-amd64
+    mem_limit: 192m
+  api:
+    image: healthy-care-api:20261026-amd64
+    mem_limit: 192m
+    environment: {COOKIE_SECURE: 'true'}
+  worker:
+    image: healthy-care-api:20261026-amd64
+    mem_limit: 192m
+    environment: {COOKIE_SECURE: 'true'}
+  agent-runtime:
+    image: healthy-care-agent:20261026-amd64
+    mem_limit: 384m
+  gateway:
+    image: healthy-care-web:20261026-web02-amd64
+    ports: !override ['127.0.0.1:8781:80']
+    volumes: ['${PUBLIC_MATERIALS_DIR:-/opt/healthy-care/shared/public}:/srv/materials:ro']
+    mem_limit: 64m
+  backup:
+    image: healthy-care-backup:20261026-amd64
+    mem_limit: 128m
+  public-tunnel:
+    image: ${CLOUDFLARED_IMAGE:?Set an existing pinned cloudflared image}
+    command: [tunnel, --no-autoupdate, --url, 'http://gateway:80']
+    networks: [app]
+    restart: unless-stopped
+    mem_limit: 128m
+    logging: {driver: json-file, options: {max-size: 5m, max-file: '2'}}
+    depends_on:
+      gateway: {condition: service_started}

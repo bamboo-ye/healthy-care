@@ -1,0 +1,1130 @@
+{
+  "schema_version": "recording-benchmark-v1",
+  "data_origin": "synthetic",
+  "fields": [
+    "symptom",
+    "onset_days",
+    "severity",
+    "impact",
+    "medication_state",
+    "medication_name"
+  ],
+  "cases": [
+    {
+      "id": "respiratory-00",
+      "cluster": "template-00",
+      "split": "development",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\", \"onset_days\": 1, \"medication_state\": \"not_used\"}",
+      "disclosed": [
+        "symptom",
+        "onset_days",
+        "medication_state"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 1,
+        "severity": null,
+        "impact": "不影响活动",
+        "medication_state": "not_used",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "skin-00",
+      "cluster": "template-00",
+      "split": "development",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\", \"onset_days\": 1, \"medication_state\": \"not_used\"}",
+      "disclosed": [
+        "symptom",
+        "onset_days",
+        "medication_state"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 1,
+        "severity": null,
+        "impact": "不影响活动",
+        "medication_state": "not_used",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "digestive-00",
+      "cluster": "template-00",
+      "split": "development",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\", \"onset_days\": 1, \"medication_state\": \"not_used\"}",
+      "disclosed": [
+        "symptom",
+        "onset_days",
+        "medication_state"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 1,
+        "severity": null,
+        "impact": "不影响活动",
+        "medication_state": "not_used",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "respiratory-01",
+      "cluster": "template-01",
+      "split": "development",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 2,
+        "severity": 2,
+        "impact": "影响睡眠",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "skin-01",
+      "cluster": "template-01",
+      "split": "development",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 2,
+        "severity": 2,
+        "impact": "影响睡眠",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "digestive-01",
+      "cluster": "template-01",
+      "split": "development",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 2,
+        "severity": 2,
+        "impact": "影响睡眠",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "respiratory-02",
+      "cluster": "template-02",
+      "split": "development",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 3,
+        "severity": 3,
+        "impact": "影响工作",
+        "medication_state": "unknown",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "skin-02",
+      "cluster": "template-02",
+      "split": "development",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 3,
+        "severity": 3,
+        "impact": "影响工作",
+        "medication_state": "unknown",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "digestive-02",
+      "cluster": "template-02",
+      "split": "development",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 3,
+        "severity": 3,
+        "impact": "影响工作",
+        "medication_state": "unknown",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "respiratory-03",
+      "cluster": "template-03",
+      "split": "development",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\", \"onset_days\": 4}",
+      "disclosed": [
+        "symptom",
+        "onset_days"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 4,
+        "severity": 4,
+        "impact": "记不清",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "skin-03",
+      "cluster": "template-03",
+      "split": "development",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\", \"onset_days\": 4}",
+      "disclosed": [
+        "symptom",
+        "onset_days"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 4,
+        "severity": 4,
+        "impact": "记不清",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "digestive-03",
+      "cluster": "template-03",
+      "split": "development",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\", \"onset_days\": 4}",
+      "disclosed": [
+        "symptom",
+        "onset_days"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 4,
+        "severity": 4,
+        "impact": "记不清",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "respiratory-04",
+      "cluster": "template-04",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\", \"medication_state\": \"not_used\"}",
+      "disclosed": [
+        "symptom",
+        "medication_state"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 1,
+        "severity": 5,
+        "impact": "不影响活动",
+        "medication_state": "not_used",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "skin-04",
+      "cluster": "template-04",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\", \"medication_state\": \"not_used\"}",
+      "disclosed": [
+        "symptom",
+        "medication_state"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 1,
+        "severity": 5,
+        "impact": "不影响活动",
+        "medication_state": "not_used",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "digestive-04",
+      "cluster": "template-04",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\", \"medication_state\": \"not_used\"}",
+      "disclosed": [
+        "symptom",
+        "medication_state"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 1,
+        "severity": 5,
+        "impact": "不影响活动",
+        "medication_state": "not_used",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "respiratory-05",
+      "cluster": "template-05",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 2,
+        "severity": null,
+        "impact": "影响睡眠",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "skin-05",
+      "cluster": "template-05",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 2,
+        "severity": null,
+        "impact": "影响睡眠",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "digestive-05",
+      "cluster": "template-05",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 2,
+        "severity": null,
+        "impact": "影响睡眠",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "respiratory-06",
+      "cluster": "template-06",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\", \"onset_days\": 3}",
+      "disclosed": [
+        "symptom",
+        "onset_days"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 3,
+        "severity": 7,
+        "impact": "影响工作",
+        "medication_state": "unknown",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "skin-06",
+      "cluster": "template-06",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\", \"onset_days\": 3}",
+      "disclosed": [
+        "symptom",
+        "onset_days"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 3,
+        "severity": 7,
+        "impact": "影响工作",
+        "medication_state": "unknown",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "digestive-06",
+      "cluster": "template-06",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\", \"onset_days\": 3}",
+      "disclosed": [
+        "symptom",
+        "onset_days"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 3,
+        "severity": 7,
+        "impact": "影响工作",
+        "medication_state": "unknown",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "respiratory-07",
+      "cluster": "template-07",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 4,
+        "severity": 1,
+        "impact": "记不清",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "skin-07",
+      "cluster": "template-07",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 4,
+        "severity": 1,
+        "impact": "记不清",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "digestive-07",
+      "cluster": "template-07",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 4,
+        "severity": 1,
+        "impact": "记不清",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "respiratory-08",
+      "cluster": "template-08",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\", \"medication_state\": \"not_used\"}",
+      "disclosed": [
+        "symptom",
+        "medication_state"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 1,
+        "severity": 2,
+        "impact": "不影响活动",
+        "medication_state": "not_used",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "skin-08",
+      "cluster": "template-08",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\", \"medication_state\": \"not_used\"}",
+      "disclosed": [
+        "symptom",
+        "medication_state"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 1,
+        "severity": 2,
+        "impact": "不影响活动",
+        "medication_state": "not_used",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "digestive-08",
+      "cluster": "template-08",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\", \"medication_state\": \"not_used\"}",
+      "disclosed": [
+        "symptom",
+        "medication_state"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 1,
+        "severity": 2,
+        "impact": "不影响活动",
+        "medication_state": "not_used",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "respiratory-09",
+      "cluster": "template-09",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\", \"onset_days\": 2}",
+      "disclosed": [
+        "symptom",
+        "onset_days"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 2,
+        "severity": 3,
+        "impact": "影响睡眠",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "skin-09",
+      "cluster": "template-09",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\", \"onset_days\": 2}",
+      "disclosed": [
+        "symptom",
+        "onset_days"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 2,
+        "severity": 3,
+        "impact": "影响睡眠",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "digestive-09",
+      "cluster": "template-09",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\", \"onset_days\": 2}",
+      "disclosed": [
+        "symptom",
+        "onset_days"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 2,
+        "severity": 3,
+        "impact": "影响睡眠",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "respiratory-10",
+      "cluster": "template-10",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 3,
+        "severity": null,
+        "impact": "影响工作",
+        "medication_state": "unknown",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "skin-10",
+      "cluster": "template-10",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 3,
+        "severity": null,
+        "impact": "影响工作",
+        "medication_state": "unknown",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "digestive-10",
+      "cluster": "template-10",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 3,
+        "severity": null,
+        "impact": "影响工作",
+        "medication_state": "unknown",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "respiratory-11",
+      "cluster": "template-11",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 4,
+        "severity": 5,
+        "impact": "记不清",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "skin-11",
+      "cluster": "template-11",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 4,
+        "severity": 5,
+        "impact": "记不清",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "digestive-11",
+      "cluster": "template-11",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 4,
+        "severity": 5,
+        "impact": "记不清",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "respiratory-12",
+      "cluster": "template-12",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\", \"onset_days\": 1, \"medication_state\": \"not_used\"}",
+      "disclosed": [
+        "symptom",
+        "onset_days",
+        "medication_state"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 1,
+        "severity": 6,
+        "impact": "不影响活动",
+        "medication_state": "not_used",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "skin-12",
+      "cluster": "template-12",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\", \"onset_days\": 1, \"medication_state\": \"not_used\"}",
+      "disclosed": [
+        "symptom",
+        "onset_days",
+        "medication_state"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 1,
+        "severity": 6,
+        "impact": "不影响活动",
+        "medication_state": "not_used",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "digestive-12",
+      "cluster": "template-12",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\", \"onset_days\": 1, \"medication_state\": \"not_used\"}",
+      "disclosed": [
+        "symptom",
+        "onset_days",
+        "medication_state"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 1,
+        "severity": 6,
+        "impact": "不影响活动",
+        "medication_state": "not_used",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "respiratory-13",
+      "cluster": "template-13",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 2,
+        "severity": 7,
+        "impact": "影响睡眠",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "skin-13",
+      "cluster": "template-13",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 2,
+        "severity": 7,
+        "impact": "影响睡眠",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "digestive-13",
+      "cluster": "template-13",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 2,
+        "severity": 7,
+        "impact": "影响睡眠",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "respiratory-14",
+      "cluster": "template-14",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 3,
+        "severity": 1,
+        "impact": "影响工作",
+        "medication_state": "unknown",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "skin-14",
+      "cluster": "template-14",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 3,
+        "severity": 1,
+        "impact": "影响工作",
+        "medication_state": "unknown",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "digestive-14",
+      "cluster": "template-14",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 3,
+        "severity": 1,
+        "impact": "影响工作",
+        "medication_state": "unknown",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "respiratory-15",
+      "cluster": "template-15",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\", \"onset_days\": 4}",
+      "disclosed": [
+        "symptom",
+        "onset_days"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 4,
+        "severity": null,
+        "impact": "记不清",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "skin-15",
+      "cluster": "template-15",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\", \"onset_days\": 4}",
+      "disclosed": [
+        "symptom",
+        "onset_days"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 4,
+        "severity": null,
+        "impact": "记不清",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "digestive-15",
+      "cluster": "template-15",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\", \"onset_days\": 4}",
+      "disclosed": [
+        "symptom",
+        "onset_days"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 4,
+        "severity": null,
+        "impact": "记不清",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "respiratory-16",
+      "cluster": "template-16",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\", \"medication_state\": \"not_used\"}",
+      "disclosed": [
+        "symptom",
+        "medication_state"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 1,
+        "severity": 3,
+        "impact": "不影响活动",
+        "medication_state": "not_used",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "skin-16",
+      "cluster": "template-16",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\", \"medication_state\": \"not_used\"}",
+      "disclosed": [
+        "symptom",
+        "medication_state"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 1,
+        "severity": 3,
+        "impact": "不影响活动",
+        "medication_state": "not_used",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "digestive-16",
+      "cluster": "template-16",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\", \"medication_state\": \"not_used\"}",
+      "disclosed": [
+        "symptom",
+        "medication_state"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 1,
+        "severity": 3,
+        "impact": "不影响活动",
+        "medication_state": "not_used",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "respiratory-17",
+      "cluster": "template-17",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 2,
+        "severity": 4,
+        "impact": "影响睡眠",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "skin-17",
+      "cluster": "template-17",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 2,
+        "severity": 4,
+        "impact": "影响睡眠",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "digestive-17",
+      "cluster": "template-17",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 2,
+        "severity": 4,
+        "impact": "影响睡眠",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "respiratory-18",
+      "cluster": "template-18",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\", \"onset_days\": 3}",
+      "disclosed": [
+        "symptom",
+        "onset_days"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 3,
+        "severity": 5,
+        "impact": "影响工作",
+        "medication_state": "unknown",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "skin-18",
+      "cluster": "template-18",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\", \"onset_days\": 3}",
+      "disclosed": [
+        "symptom",
+        "onset_days"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 3,
+        "severity": 5,
+        "impact": "影响工作",
+        "medication_state": "unknown",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "digestive-18",
+      "cluster": "template-18",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\", \"onset_days\": 3}",
+      "disclosed": [
+        "symptom",
+        "onset_days"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 3,
+        "severity": 5,
+        "impact": "影响工作",
+        "medication_state": "unknown",
+        "medication_name": null
+      }
+    },
+    {
+      "id": "respiratory-19",
+      "cluster": "template-19",
+      "split": "test",
+      "topic": "respiratory",
+      "initial": "合成记录：{\"symptom\": \"鼻塞\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "鼻塞",
+        "onset_days": 4,
+        "severity": 6,
+        "impact": "记不清",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "skin-19",
+      "cluster": "template-19",
+      "split": "test",
+      "topic": "skin",
+      "initial": "合成记录：{\"symptom\": \"皮肤发痒\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "皮肤发痒",
+        "onset_days": 4,
+        "severity": 6,
+        "impact": "记不清",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    },
+    {
+      "id": "digestive-19",
+      "cluster": "template-19",
+      "split": "test",
+      "topic": "digestive",
+      "initial": "合成记录：{\"symptom\": \"腹胀\"}",
+      "disclosed": [
+        "symptom"
+      ],
+      "facts": {
+        "symptom": "腹胀",
+        "onset_days": 4,
+        "severity": 6,
+        "impact": "记不清",
+        "medication_state": "used",
+        "medication_name": "虚构记录用品甲"
+      }
+    }
+  ]
+}

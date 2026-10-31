@@ -1,0 +1,28 @@
+{
+  auto_https off
+  admin off
+}
+:80 {
+  header {
+    X-Content-Type-Options nosniff
+    Referrer-Policy same-origin
+    X-Frame-Options DENY
+    Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'self'; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+  }
+  @backend path /v1/* /healthz /readyz
+  handle @backend {
+    reverse_proxy api:8080 {
+      flush_interval -1
+    }
+  }
+  handle /research* {
+    root * /srv
+    try_files {path} /research/index.html
+    file_server
+  }
+  handle {
+    root * /srv
+    try_files {path} /index.html
+    file_server
+  }
+}

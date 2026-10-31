@@ -1,0 +1,117 @@
+{
+  "nodes": [
+    {
+      "id": "__start__",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "__start__"
+      }
+    },
+    {
+      "id": "context",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "context"
+      }
+    },
+    {
+      "id": "triage",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "triage"
+      }
+    },
+    {
+      "id": "model",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "model"
+      }
+    },
+    {
+      "id": "validate",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "validate"
+      }
+    },
+    {
+      "id": "confirmation",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "confirmation"
+      }
+    },
+    {
+      "id": "__end__"
+    }
+  ],
+  "edges": [
+    {
+      "source": "__start__",
+      "target": "context"
+    },
+    {
+      "source": "context",
+      "target": "triage"
+    },
+    {
+      "source": "model",
+      "target": "validate"
+    },
+    {
+      "source": "triage",
+      "target": "model",
+      "conditional": true
+    },
+    {
+      "source": "triage",
+      "target": "validate",
+      "conditional": true
+    },
+    {
+      "source": "validate",
+      "target": "confirmation"
+    },
+    {
+      "source": "confirmation",
+      "target": "__end__"
+    }
+  ]
+}
