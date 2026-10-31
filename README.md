@@ -13,13 +13,13 @@
   <p>
     <a href="https://admissions-broadband-bend-vanilla.trycloudflare.com/">用户端演示</a> ·
     <a href="https://admissions-broadband-bend-vanilla.trycloudflare.com/research/">科研工作台</a> ·
-    <a href="https://admissions-broadband-bend-vanilla.trycloudflare.com/materials/healthy-care-demo-v7.mp4">观看4:59演示</a> ·
+    <a href="#项目演示">观看4:59演示</a> ·
     <a href="https://sciencepal.ai/share/65ecd584-6adf-4000-88d9-4004e3f82a65">SciencePal运行回放</a>
   </p>
 </div>
 
 <p align="center">
-  <a href="#核心能力">核心能力</a> · <a href="#快速开始">快速开始</a> · <a href="#sciencepal科研闭环">SciencePal科研闭环</a> · <a href="#验证与复现">验证与复现</a> · <a href="#文档">文档</a> · <a href="#路线图">路线图</a>
+  <a href="#项目演示">项目演示</a> · <a href="#核心能力">核心能力</a> · <a href="#快速开始">快速开始</a> · <a href="#sciencepal科研闭环">SciencePal科研闭环</a> · <a href="#验证与复现">验证与复现</a> · <a href="#文档">文档</a> · <a href="#路线图">路线图</a>
 </p>
 
 ## 项目演示
@@ -47,8 +47,8 @@ https://github.com/user-attachments/assets/d07c2808-4b52-4b38-ae56-620eefdfac52
 
 伴AI·健康伙伴将个人健康空间与科研工作区连接起来，围绕两个可验证的问题设计：
 
-- **采集问题：**追问和持续记录能否补充有来源支持的信息，并保留未知与缺失？
-- **分析问题：**连续记录能否支持固定观察窗口分析，定位需要进一步核实的用药信息？
+- **采集问题**：追问和持续记录能否补充有来源支持的信息，并保留未知与缺失？
+- **分析问题**：连续记录能否支持固定观察窗口分析，定位需要进一步核实的用药信息？
 
 产品的起点是一段亲切的对话；研究的起点是一份经过授权、保留来源和版本的记录。
 
@@ -161,7 +161,7 @@ flowchart LR
     end
     W --> LG
     LG --> M["图文模型服务"]
-    LG -. "检查点" .-> PG
+    LG -.->|检查点| PG
     W --> SA
     SA --> SP["SciencePal · 科研Agent执行"]
     SP --> ART["报告 / CSV / 执行日志"]
